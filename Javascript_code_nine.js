@@ -26,93 +26,20 @@ function getLetter(s) {
     let letter;
     // Write your code here
     const character = s.charAt(0);
-    switch(character) {
-        case 'a':
+    switch(true) {
+        case 'aeiou'.includes(character):
             letter = 'A';
-         break;
-        case 'b': 
-            letter = 'B';   
-         break;
-        case 'c': 
-            letter = 'B';
-         break;
-        case 'd': 
-            letter = 'B';
-         break;
-        case 'e': 
-            letter = 'A';
-         break;
-        case 'f': 
-            letter = 'B';
-         break;
-        case 'g': 
-            letter = 'B';
-         break;
-        case 'h': 
-            letter = 'C';
-         break;
-        case 'i': 
-            letter = 'A';
-         break;
-        case 'j':         
-            letter = 'C';
-         break;        
-        case 'k': 
-            letter = 'C';
-         break;
-        case 'l': 
-            letter = 'C';
-         break;
-        case 'm': 
-            letter = 'C';
-         break;
-        case 'n': 
-            letter = 'D';
-         break;
-        case 'o': 
-            letter = 'A';
-         break;
-        case 'p': 
-            letter = 'D';
-         break;
-        case 'q': 
-            letter = 'D';
-         break;
-        case 'r': 
-            letter = 'D';
-         break;
-        case 's': 
-            letter = 'D';
-         break;
-        case 't': 
-            letter = 'D';
-         break;
-        case 'u': 
-            letter = 'D';
-         break;
-        case 'v': 
-            letter = 'D';
-         break;
-        case 'w': 
-            letter = 'D';
-         break;
-        case 'x': 
-            letter = 'D';
-         break;
-        case 'y': 
-            letter = 'D';
             break;
-        case 'z':  
+        case 'bcdfg'.includes(character): 
+            letter = 'B';   
+            break;
+        case 'hjlkm'.includes(character): 
+            letter = 'C';
+             break;
+        case 'npqrstuvwxyz'.includes(character): 
             letter = 'D';
             break;
     }
 
     return letter;
-}
-
-
-function main() {
-    const s = readLine();
-    
-    console.log(getLetter(s));
 }
